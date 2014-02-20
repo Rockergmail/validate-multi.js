@@ -146,7 +146,7 @@
         } else if(arguments.length == 2){
             language = null;
             callback = null
-        } else if(arguments.length < 2) {11
+        } else if(arguments.length < 2) {
             throw Error('The arguments should be at least 2')
         }
 
