@@ -39,7 +39,7 @@
             valid_url: 'The %s field must contain a valid URL.'
         },
         chinese_zh: {
-            required: '必須填滿 %s 欄位。',
+            required: '請輸入 %s 欄位。',
             matches: '你的 %s 欄位與 %s 欄位不符。',
             valid_email: '請填上有效的 %s ',
             valid_emails: '請填上有效的 %s ',
