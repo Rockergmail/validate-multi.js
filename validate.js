@@ -1,9 +1,7 @@
 /*
- * validate.js 1.3.1
- * Copyright (c) 2011 - 2014 Rick Harrison, http://rickharrison.me
- * validate.js is open sourced under the MIT license.
- * Portions of validate.js are inspired by CodeIgniter.
- * http://rickharrison.github.com/validate.js
+ * validate-multi.js
+ * 
+ * original from : http://rickharrison.github.com/validate.js
  */
 
 
@@ -133,20 +131,34 @@
 
 
     var FormValidator = function(formNameOrNode, fields, language, callback) {
-
         if(arguments.length == 3) {
-            if(!typeof arguments[2] === 'string' || arguments[2].indexOf('callback') !== -1) {
+            if(typeof arguments[2] === 'function' ) {
+                // not equal string and can't find callback in the string
+                // it should be callback parameters
                 callback = language;
                 language = null;
+            } else if(arguments[2].indexOf('callback') !== -1) {
+                // it is a string, but find callback in the string 
+                // it should be a callback
+                callback = language;
+                language = null; 
             }
         } else if(arguments.length == 2){
             language = null;
             callback = null
-        } else if(arguments.length < 2) {
+        } else if(arguments.length < 2) {11
             throw Error('The arguments should be at least 2')
         }
 
-        this.callback = defaults[callback] || defaults.callback;
+        if(typeof callback === 'string' || callback == null){
+            if(callback == null ) {
+                this.callback = defaults.callback;
+            } else {
+                this.callback = defaults[callback];
+            }
+        } else {
+            this.callback = callback;
+        }
         // default language to english
         this.language = language || 'english';
         this.errors = [];
