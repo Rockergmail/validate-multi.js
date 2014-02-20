@@ -84,7 +84,9 @@ REFERENCE : http://rickharrison.github.io/validate.js/
 
 ## Themes
 
-- themeBasic
+You will have to include the css file in the themes you use..
+
+- themeBasic (CSS : https://raw2.github.com/chilijung/validate-multi.js/master/themes/basic/basic.css)
 
 ![cb_basic](https://raw2.github.com/chilijung/validate-multi.js/master/preview/cb_basic.png)
 
