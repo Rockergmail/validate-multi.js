@@ -1,6 +1,6 @@
 # validate-multi.js
 
-Lightweight JavaScript form validation library with multi languages and themes. And `validate.js` is original from https://github.com/rickharrison/validate.js
+JavaScript form validation library with multi languages and themes. And `validate.js` is original from https://github.com/rickharrison/validate.js
 
 ## Features
 
