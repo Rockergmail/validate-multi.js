@@ -89,6 +89,48 @@ REFERENCE : http://rickharrison.github.io/validate.js/
 ![cb_basic](https://raw2.github.com/chilijung/validate-multi.js/master/preview/cb_basic.png)
 
 
+## Contribute your own theme
+
+Contributing your own theme is really easy, go to folder `themes` and make a folder, the folder name should be your theme name. Inside the folder you should create three files.
+
+- html file : a smple of the theme
+- css file : the css use in the theme. (you could include `index.css`, if you want some default stylesheets )
+- js file : you main customized js script
+
+The js file should be some thing like
+
+```javascript
+var basic = function(errors, evt) {
+    ...
+    ...
+    // your main code here
+    ...    
+}
+
+module.exports = basic; // module.exports should put in the end.
+
+```
+
+after this, put include your theme in `validate.js`
+
+see sample here: https://github.com/chilijung/validate-multi.js/blob/master/validate.js#L11
+
+add a line 
+
+```javascript
+ var basic = require('./themes/"theme name"/"theme name"');
+ ```
+
+ and add another line in https://github.com/chilijung/validate-multi.js/blob/master/validate.js#L95
+
+for example.
+
+ ```javascript
+ themeBasic = basic
+```
+
+And send a PR! We will add your theme!
+
 ## Develop
 
 ```
