@@ -6,7 +6,11 @@
  * http://rickharrison.github.com/validate.js
  */
 
+
+
 (function(window, document, undefined) {
+
+    var basic = require('./themes/basic/basic');
     /*
      * If you would like an application-wide config, change these defaults.
      * Otherwise, use the setMessage() function to configure form specific messages.
@@ -86,9 +90,7 @@
             is_file_type: '%s 只能是 %s 的文件。',
             valid_url: '%s 必须是有效的 URL。'
         },
-        callback: function(errors) {
-
-        }
+        callback: basic
     };
 
 
@@ -129,11 +131,20 @@
     var FormValidator = function(formNameOrNode, fields, language, callback) {
 
         if(arguments.length == 3) {
-            callback = language;
+            if(!typeof arguments[2] === 'string') {
+                callback = language;
+                language = null;
+            }
+        } else if(arguments.length == 2){
             language = null;
-        } else if(arguments.length < 3){
-            throw Error("The arguments should at least three.")
+            callback = null
+        } else if(arguments.length < 2) {
+            throw Error('The arguments should be at least 2')
         }
+        console.log(formNameOrNode)
+        console.log(fields)
+        console.log(language)
+        console.log(callback)
 
         this.callback = callback || defaults.callback;
         // default language to english
