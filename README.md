@@ -1,4 +1,4 @@
-# validate.js
+# validate-multi.js
 
 Lightweight JavaScript form validation library with multi languages and themes. And it is a fork from https://github.com/rickharrison/validate.js
 
