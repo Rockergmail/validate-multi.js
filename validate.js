@@ -90,7 +90,11 @@
             is_file_type: '%s 只能是 %s 的文件。',
             valid_url: '%s 必须是有效的 URL。'
         },
-        callback: basic
+        callback: function(error) {
+
+        },
+
+        callbackBasic: basic
     };
 
 
@@ -131,7 +135,7 @@
     var FormValidator = function(formNameOrNode, fields, language, callback) {
 
         if(arguments.length == 3) {
-            if(!typeof arguments[2] === 'string') {
+            if(!typeof arguments[2] === 'string' || arguments[2].indexOf('callback') !== -1) {
                 callback = language;
                 language = null;
             }
@@ -141,12 +145,8 @@
         } else if(arguments.length < 2) {
             throw Error('The arguments should be at least 2')
         }
-        console.log(formNameOrNode)
-        console.log(fields)
-        console.log(language)
-        console.log(callback)
 
-        this.callback = callback || defaults.callback;
+        this.callback = defaults[callback] || defaults.callback;
         // default language to english
         this.language = language || 'english';
         this.errors = [];
