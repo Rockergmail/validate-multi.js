@@ -92,7 +92,7 @@
 
         },
 
-        callbackBasic: basic
+        themeBasic: basic
     };
 
 
@@ -137,7 +137,7 @@
                 // it should be callback parameters
                 callback = language;
                 language = null;
-            } else if(arguments[2].indexOf('callback') !== -1) {
+            } else if(arguments[2].indexOf('theme') !== -1) {
                 // it is a string, but find callback in the string 
                 // it should be a callback
                 callback = language;

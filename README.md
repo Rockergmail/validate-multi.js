@@ -31,7 +31,7 @@ You can find minified file in `dist` folder.
 
 or you can also use the unminified file in `bundles` folder.
 
-```   
+``` 
    <script type="text/javascript" src="bundle.js"></script>
 ```
 
@@ -44,14 +44,14 @@ REFERENCE : http://rickharrison.github.io/validate.js/
 - formName : `must` `string` The form name of the form.
 - fields : `must` `array` field settings see details in http://rickharrison.github.io/validate.js/
 - language : `optional` `string` now support `chinese`, chinese_zh`, `english`
-- callback : `optional` `string | function`  we support some themes that you could use. The default theme is `callbackBasic`, you can also use your customize callback for example `function(errors){}`, `errors` will be an array that contains the errors occurs in the fields.
+- callback : `optional` `string | function`  we support some themes that you could use. The default theme is `themeBasic`, you can also use your customize callback for example `function(errors){}`, `errors` will be an array that contains the errors occurs in the fields.
 
 ### Example
 
 ``` javascript
     var validator = new FormValidator('example_form', [{
         name: 'req',
-        display: 'required',    
+        display: 'required', 
         rules: 'required'
     }, {
         name: 'alphanumeric',
@@ -77,14 +77,14 @@ REFERENCE : http://rickharrison.github.io/validate.js/
             // Show the errors
 	    // here will return the error messages in an array.
         }
-    } // callback is now also optional too, the default theme is `callbackBasic`.
+    } // callback is now also optional too, the default theme is `themeBasic`.
     );
 
 ```
 
 ## Themes
 
-- callbackBasic
+- themeBasic
 
 ![cb_basic](https://raw2.github.com/chilijung/validate-multi.js/master/preview/cb_basic.png)
 
