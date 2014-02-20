@@ -106,7 +106,7 @@ var basic = function(errors, evt) {
     ...
     ...
     // your main code here
-    ...    
+    ... 
 }
 
 module.exports = basic; // module.exports should put in the end.
@@ -131,6 +131,8 @@ for example.
  ```javascript
  themeBasic = basic
 ```
+
+**You will probably need to use `node build.js` to rebuild your `bundle.js` in `bundle` folder**
 
 And send a PR! We will add your theme!
 
