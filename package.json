@@ -1,0 +1,30 @@
+{
+  "name": "validate.js",
+  "version": "0.0.0",
+  "description": "validate.js",
+  "main": "",
+  "dependencies": {
+    "gulp-jsmin": "~0.1.1",
+    "gulp": "~3.5.2",
+    "gulp-rename": "~1.1.0"
+  },
+  "devDependencies": {
+    "connect": "~2.13.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chilijung/validate.js.git"
+  },
+  "keywords": [
+    "validate"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chilijung/validate.js/issues"
+  },
+  "homepage": "https://github.com/chilijung/validate.js"
+}
