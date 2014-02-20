@@ -41,10 +41,12 @@ or you can also use the unminified file in `bundles` folder.
 
 REFERENCE : http://rickharrison.github.io/validate.js/
 
-	- formName : `must` `string` The form name of the form.
-	- fields : `must` `array` field settings see details in http://rickharrison.github.io/validate.js/
-	- language : `optional` `string` now support `chinese`, chinese_zh`, `english`
-	- callback : `optional` `string | function`  we support some themes that you could use. The default theme is `callbackBasic`, you can also use your customize callback for example `function(errors){}`, `errors` will be an array that contains the errors occurs in the fields.
+- formName : `must` `string` The form name of the form.
+- fields : `must` `array` field settings see details in http://rickharrison.github.io/validate.js/
+- language : `optional` `string` now support `chinese`, chinese_zh`, `english`
+- callback : `optional` `string | function`  we support some themes that you could use. The default theme is `callbackBasic`, you can also use your customize callback for example `function(errors){}`, `errors` will be an array that contains the errors occurs in the fields.
+
+### Example
 
 ``` javascript
     var validator = new FormValidator('example_form', [{
@@ -83,6 +85,8 @@ REFERENCE : http://rickharrison.github.io/validate.js/
 ## Themes
 
 - callbackBasic
+
+![cb_basic](https://raw2.github.com/chilijung/validate-multi.js/master/preview/cb_basic.png)
 
 
 ## Develop
