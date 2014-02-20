@@ -112,6 +112,7 @@ var basic = function(errors, evt) {
 module.exports = basic; // module.exports should put in the end.
 
 ```
+[see js file sample](https://github.com/chilijung/validate-multi.js/blob/master/themes/basic/basic.js)
 
 after this, put include your theme in `validate.js`
 
