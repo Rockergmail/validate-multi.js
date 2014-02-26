@@ -8,7 +8,9 @@
 
 (function(window, document, undefined) {
 
+    // require your theme
     var basic = require('./themes/basic/basic');
+    //var inbox = require('./themes/inbox/inbox');
     /*
      * If you would like an application-wide config, change these defaults.
      * Otherwise, use the setMessage() function to configure form specific messages.
@@ -92,7 +94,10 @@
 
         },
 
+        // declare your theme object
         themeBasic: basic
+
+        //themeInbox: inbox
     };
 
 
