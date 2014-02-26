@@ -15,12 +15,7 @@ var basic = function(errors, evt) {
         SELECTOR_ERRORS.css({ display: 'none' });
         SELECTOR_SUCCESS.fadeIn(200);
     }
-    
-    if (evt && evt.preventDefault) {
-        evt.preventDefault();
-    } else if (event) {
-        event.returnValue = false;
-    }
+
 }
 
 module.exports = basic;
